@@ -1,0 +1,126 @@
+/* base
+seletor {
+    propriedade: valor;
+}
+*/
+* { /*funciona como reset de margens etc*/
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body > header { /*header - filho direto do body*/
+    background-color: #2f3640;
+    padding: 16px 0;
+    color: #f5f6fa
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header li {
+    display: inline; /*forma que o elemento vai ser exibido inline: linha - block: em blocos - none: oculta? */
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-left: 16px;
+}
+
+header li a {
+    color: #f5f6fa;
+    text-decoration: none;
+}
+
+.container {
+    width: 1366px;
+    margin: 0 auto; /* 0 auto 0 auto ordem: topo, direita, baixo, esquerda*/
+}
+
+.articles {
+    display: flex; /*mantem um ao lado do outro com rolagem na horizontal*/
+    flex-wrap: wrap;
+    justify-content: space-between; /*usa o espaço sobrando, neste caso distribuiu de forma igualitária 10%*/
+}
+
+.articles article img {
+    /*height:180px;*/
+    width: 100%;
+}
+
+.articles article {
+    width: 30%;
+}
+
+/*o atributo position absolute deixa a img livre usando "top e left" controlamos 
+position relative leva em conta o container dela (fica dentro do container)
+position fixes deixa fixa
+*/
+section {
+    padding: 16px 0;
+}
+
+section h2,
+.articles article { 
+    margin-bottom: 16px;
+}
+
+.articles article h3 {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.articles article a {
+    background-color: blue;
+    color: #fff;
+    padding: 8px;
+    display: inline-block; /*corrige a sobreposição do botão que por padrão vem como display inline*/
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.articles article a:hover {
+    text-decoration: underline; /*define o estado dos elementos dando efeito*/
+}
+.articles article p,
+.articles article a {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.articles article h3 {
+    font-size: 24px;
+}
+
+section h2 {
+    font-size: 32px;
+}
+
+#sports {
+    background-color: rgb(0,255,0,0.1);
+}
+
+#sports .articles article a {
+    background-color: #009432;
+}
+
+#economy {
+    background-color: hsl(65, 76%, 87%);
+}
+
+#economy .articles article a {
+    background-color: #ff9f1a;
+}
+
+#entretenimento {
+    background-color: #ede5f6;
+}
+
+#entretenimento .articles article a {
+    background-color: #61156f;
+}
+
+#tecnologia {
+    background-color: rgb(192, 239, 250);
+}
